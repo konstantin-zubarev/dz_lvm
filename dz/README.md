@@ -18,44 +18,36 @@ config.ssh.insert_key = 'true'
 [root@lvm ~]# yum update
 [root@lvm ~]# yum install xfsdump -y
 ```
-
-1.3. Подготовим временный раздел для корневого тома:
-
+Подготовим временный раздел для корневого тома:
+```
 [root@lvm ~]# pvcreate /dev/sdb
-
 [root@lvm ~]# vgcreate vg_root /dev/sdb
-
 [root@lvm ~]# lvcreate -n lv_root -l +100%FREE /dev/vg_root
-
-
-1.4. Создадим файловую систему XFS и смонтируем ее в каталог /mnt
-
+```
+Создадим файловую систему XFS и смонтируем ее в каталог /mnt
+```
 [root@lvm ~]# mkfs.xfs /dev/vg_root/lv_root
-
 [root@lvm ~]# mount /dev/vg_root/lv_root /mnt
-
 [vagrant@lvm ~]$ lsblk
-
-
-1.5. Сдампим содержимое текущего корневого раздела в наш временный:
-
+```
+Сдампим содержимое текущего корневого раздела в наш временный:
+```
 [root@lvm ~]# xfsdump -J - /dev/VolGroup00/LogVol00 | xfsrestore -J - /mnt
-
+```
 Проверим содержимое каталога /mnt
-
+```
 [root@lvm ~]# ls /mnt
-
-1.6. Заходим в окружение chroot нашего временного корня:
-
+```
+Заходим в окружение chroot нашего временного корня:
+```
 [root@lvm ~]# for i in /proc/ /sys/ /dev/ /run/ /boot/; do mount --bind $i /mnt/$i; done
-
 [root@lvm ~]# chroot /mnt/
-
-1.7. Запишем новый загрузчик:
-
+```
+Запишем новый загрузчик:
+```
 [root@lvm ~]# grub2-mkconfig -o /boot/grub2/grub.cfg
-
-1.8. Обновляем образы загрузки:
+```
+Обновляем образы загрузки:
 
 [root@lvm ~]# cd /boot ; for i in `ls initramfs-*img`; do dracut -v $i `echo $i|sed "s/initramfs-//g; s/.img//g"` --force; done
 
