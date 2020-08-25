@@ -215,7 +215,7 @@ root@lvm ~]# ls /mnt
 
 [root@lvm ~]# mount /home
 
-Утилитой asciinema можно воспроизвести файл dz_lvm.cast
+Детально посмотреть выполнение ДЗ. Утилитой asciinema оспроизвести файл dz_lvm.cast
 
 Методички:
 
