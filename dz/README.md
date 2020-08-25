@@ -8,7 +8,7 @@ config.ssh.username = 'root'
 config.ssh.password = 'vagrant'
 config.ssh.insert_key = 'true'
 ```
-## Уменьшить том под / до 8G
+#### Уменьшить том под / до 8G
 Проверим наличие дисков:
 ```
 [root@lvm ~]$ lsblk
