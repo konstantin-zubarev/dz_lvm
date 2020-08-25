@@ -173,7 +173,7 @@ config.ssh.insert_key = 'true'
 [root@lvm ~]# lvconvert --merge /dev/VolGroup00/home_snap
 [root@lvm ~]# mount /home
 ```
-Детально посмотреть выполнение ДЗ. Утилитой asciinema оспроизвести файл dz_lvm.cast
+Детально посмотреть выполнение ДЗ. Утилитой [asciinema](https://asciinema.org/) оспроизвести файл dz_lvm.cast
 
 Методички:
 
