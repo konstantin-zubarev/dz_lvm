@@ -177,6 +177,4 @@ config.ssh.insert_key = 'true'
 
 Методички:
 
-- [fcfg-eth1](provisioning/templates/ifcfg-eth1.j2)
-1. [Теория_LVM](https://github.com/konstantin-zubarev/dz_lvm/blob/master/%D0%A2%D0%B5%D0%BE%D1%80%D0%B8%D1%8F_LVM_FS-5373-72b708.pdf)
-
+- [Теория_LVM](https://github.com/konstantin-zubarev/dz_lvm/blob/master/%D0%A2%D0%B5%D0%BE%D1%80%D0%B8%D1%8F_LVM_FS-5373-72b708.pdf)
