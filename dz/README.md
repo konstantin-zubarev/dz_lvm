@@ -7,7 +7,9 @@
 [root@lvm ~]$ vim ./Vagrantfile
 
 config.ssh.username = 'root'
+
 config.ssh.password = 'vagrant'
+
 config.ssh.insert_key = 'true'
 
 1. Уменьшить том под / до 8G
@@ -123,7 +125,7 @@ root@lvm ~]# ls /mnt
 
 Перезагружаем и проверяем.
 
-Удаляем том, группу и снимаем lvm-метку с диска, который нами использовался как временный (sdb):
+1.19. Удаляем том, группу и снимаем lvm-метку с диска, который нами использовался как временный (sdb):
 
 [root@lvm ~]# lvremove /dev/vg_root/lv_root
 
