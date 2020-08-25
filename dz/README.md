@@ -8,21 +8,16 @@ config.ssh.username = 'root'
 config.ssh.password = 'vagrant'
 config.ssh.insert_key = 'true'
 ```
-1. Уменьшить том под / до 8G
-
-1.1.Проверим наличие дисков:
-
+## Уменьшить том под / до 8G
+Проверим наличие дисков:
+```
 [root@lvm ~]$ lsblk
-
-
-1.2. Свободное место на диске sdb
-
+```
 Для решение задачи установим утилиту xfsdump
-
+```
 [root@lvm ~]# yum update
-
 [root@lvm ~]# yum install xfsdump -y
-
+```
 
 1.3. Подготовим временный раздел для корневого тома:
 
