@@ -214,3 +214,9 @@ root@lvm ~]# ls /mnt
 [root@lvm ~]# lvconvert --merge /dev/VolGroup00/home_snap
 
 [root@lvm ~]# mount /home
+
+Утилитой asciinema можно воспроизвести файл dz_lvm.cast
+
+Методички:
+
+1.Теория_LVM_FS-5373-72b708.pdf
