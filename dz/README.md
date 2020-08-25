@@ -176,7 +176,7 @@ config.ssh.insert_key = 'true'
 Детально посмотреть выполнение ДЗ. Утилитой asciinema оспроизвести файл dz_lvm.cast
 
 Методички:
-```
+
 - [fcfg-eth1](provisioning/templates/ifcfg-eth1.j2)
 1. [Теория_LVM](blob/master/Теория_LVM_FS-5373-72b708.pdf)
-```
+
